@@ -89,7 +89,7 @@ public class SpotifyRepository {
             }
         }
         if(albumFromList == null){
-            throw new Exception("Album not found");
+            throw new Exception("Album does not exist");
         }
         else{
             songs.add(song);
@@ -119,7 +119,7 @@ public class SpotifyRepository {
         }
 
         if(user == null){
-            throw new Exception("User not found");
+            throw new Exception("User does not exist");
         }
         else{
             playlists.add(playlist);
@@ -160,7 +160,7 @@ public class SpotifyRepository {
         }
 
         if(user == null){
-            throw new Exception("User not found");
+            throw new Exception("User does not exist");
         }
         else{
             playlists.add(playlist);
@@ -201,7 +201,7 @@ public class SpotifyRepository {
         }
 
         if(user == null){
-            throw new Exception("User not found");
+            throw new Exception("User does not exist");
         }
         else{
             for(Playlist playlist1 : playlists){
@@ -211,7 +211,7 @@ public class SpotifyRepository {
                 }
             }
             if(playlist == null){
-                throw new Exception("Playlist not found");
+                throw new Exception("Playlist does not exist");
             }
             if(creatorPlaylistMap.containsKey(user)){
                 return playlist;
@@ -244,7 +244,7 @@ public class SpotifyRepository {
             }
         }
         if(user==null) {
-            throw new Exception("User not found");
+            throw new Exception("User does not exist");
         }
 
         Song song = null;
@@ -255,7 +255,7 @@ public class SpotifyRepository {
             }
         }
         if (song==null) {
-            throw new Exception("Song not found");
+            throw new Exception("Song does not exist");
         }
 
         if(songLikeMap.containsKey(song)){
